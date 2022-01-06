@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<!--Encoding-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<!--Title-->
+	<title>Начни зарабатывать на инвестировании не выходя из дома</title>
+	<!--Meta Tags-->
+	<meta name="description" content="Начни зарабатывать на инвестировании не выходя из дома" />
+	<meta name="keywords" content="" />
+	<meta name="theme-color" content="#000000">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+	<link rel="shortcut icon" href="https://static.tildacdn.com/tild6638-6534-4336-a630-313534666133/favicon.ico"
+		type="image/x-icon">
+	<!--Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap"
+		rel="stylesheet">
+	<!--Styles-->
+	<link rel="stylesheet" href="css/main-style.min.css">
+</head>
+<!--Main Content-->
+
+<body>
+	<main class="main">
+		<section class="header">
+			<div class="container">
+				<div class="header__body">
+					<h3 class="header__title">
+						<span class="title__span">Научим</span><br>
+						Грамотно <br> инвестировать <br>
+						<span class="title__span">За 4 урока</span>
+					</h3>
+					<a href="#form-slide" class="header__button scroll-to">Получить доступ</a>
+				</div>
+			</div>
+		</section>
+		<section class="about">
+			<div class="container">
+				<div class="about__body">
+					<ul class="about__list">
+						<li class="about__list-item">
+							<img src="img/01.png" alt="Rating up" class="about__list-icon">
+							<p class="about__list-text">Высокая дополнительная прибыль</p>
+						</li>
+						<li class="about__list-item">
+							<img src="img/02.png" alt="Star icon" class="about__list-icon">
+							<p class="about__list-text">Без специального образования</p>
+						</li>
+						<li class="about__list-item">
+							<img src="img/03.png" alt="PC icon" class="about__list-icon">
+							<p class="about__list-text">Совершая простые действия</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="program">
+			<div class="container">
+				<div class="program__body">
+					<h2 class="program__title-main">Программа курса</h2>
+					<div class="program__container">
+						<div class="program__subcontainer">
+							<div class="program__box">
+								<h3 class="program__number">01</h3>
+								<div class="program__text">
+									<h2 class="program__title">Введение в инвестирование</h2>
+									<p class="program__subtitle">Разберем основные виды инвестирования и сколько на них
+										можно получать</p>
+								</div>
+							</div>
+							<div class="program__box">
+								<h3 class="program__number">02</h3>
+								<div class="program__text">
+									<h2 class="program__title">Четыре модели работы</h2>
+									<p class="program__subtitle">Опроделим четыре модели прибыли успешных инвесторов</p>
+								</div>
+							</div>
+						</div>
+						<div class="program__subcontainer">
+							<div class="program__box">
+								<h3 class="program__number">03</h3>
+								<div class="program__text">
+									<h2 class="program__title">Анализ рынка инвестиций</h2>
+									<p class="program__subtitle">Расскажем как анализировать рынок инвестиций и поймете
+										как
+										получать на этом</p>
+								</div>
+							</div>
+							<div class="program__box">
+								<h3 class="program__number">04</h3>
+								<div class="program__text">
+									<h2 class="program__title">Инструменты анализа рынка</h2>
+									<p class="program__subtitle">Подберем удобные инструменты для анализа рынка и вы
+										можете
+										начать получать на инвестировании</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="users">
+			<div class="container">
+				<div class="users__body">
+					<div class="users__container">
+						<h2 class="users__count">2000+</h2>
+						<p class="users__title">Человек уже прошли обучение и начали получать на инвестировании</p>
+					</div>
+					<div class="users__container">
+						<img src="img/04.png" alt="User icon" class="users__image">
+						<h2 class="users__title">Обучение с куратором-инвестором</h2>
+						<p class="users__subtitle">который ответит на все ваши вопросы и поможет получать прибыль
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="test" id="form-slide">
+			<div class="container">
+				<div class="test__body">
+					<h2 class="test__title">Пройдите опрос и получите доступ к онлайн-курсу по обучению получения
+						прибыли на инвестировании!</h2>
+					<div class="test__container" id="app">
+						<div class="test__header">
+							<h3 class="test__header-title">
+								Пройдите опрос и получите доступ к онлайн-курсу по обучению получения прибыли на
+								инвестировании!
+							</h3>
+							<div class="test__header-counter">{{id + 1}}/5</div>
+						</div>
+						<div class="test__main" v-if="id != 4">
+							<h2 class="test__question">{{question}}</h2>
+							<ul class="test__answers">
+								<li class="test__answer" v-for="(answer, index) in answers">
+									<input type="radio" :name="'answer' + id" :id="id + '' + index" class="test__input">
+									<label :for="id + '' + index">{{answer}}</label>
+								</li>
+							</ul>
+							<div class="test__buttons">
+								<div class="test__buttons-container">
+									<button class="test__back button" v-on:click="newQuestion(1)">Назад</button>
+									<button class="test__forward button" v-on:click="newQuestion(2)">Вперед</button>
+								</div>
+								<a href="#" class="privacy">Политика конфиденциальности</a>
+							</div>
+						</div>
+						<div class="test__main" v-if="id == 4">
+							<form action="../send.php" method="POST"
+								onsubmit="return (ValidName()&&ValidMail()&&ValidPhone())" class="test__form">
+								<div class="input-wrapper">
+									<input type="text" autocomplete="name" name="firstname" id="form-name" class="input"
+										placeholder="Имя Фамилия" required>
+									<div class="input-error" id="form-name-error"></div>
+								</div>
+								<div class="input-wrapper">
+									<input type="email" autocomplete="email" id="email" name="email" class="input"
+										placeholder="E-mail" required>
+									<div class="input-error" id="email-error"></div>
+								</div>
+								<div class="input-wrapper">
+									<input type="tel" autocomplete="phone" name="phone_number" id="phone" class="input"
+										placeholder="9127458956" required>
+									<div class="input-error" id="phone-error"></div>
+								</div>
+								<div class="input-wrapper">
+									<input type="text" name="telegram" class="input" placeholder="@Telegram">
+									<div class="input-error" id="form-telegram-error"></div>
+								</div>
+								<div class="input-wrapper">
+									<input type="text" name="watsapp" class="input" placeholder="WhatsApp">
+									<div class="input-error" id="form-whatsapp-error"></div>
+								</div>
+								<div class="test__buttons">
+									<div class="test__buttons-container">
+										<button type="button" class="test__back button"
+											v-on:click="newQuestion(1)">Назад</button>
+										<button class="test__fwd button">Отправить</button>
+									</div>
+									<a href="#" class="privacy">Политика конфиденциальности</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				id: 0,
+				question: 'Сколька Вам лет?',
+				answers: ['18-25 лет', '26-35 лет', '36-45 лет', '46 лет и старше'],
+				questList: ['Сколька Вам лет?', 'Если у Вас есть возможность, куда вложите деньги?', 'Как давно Вы начали интересоваться сферой инвестирования?', 'Согласно статистике, успех участников на 87.3% выше, при работе с наставником. Зная эту информацию, как Вы бы хотели работать?'],
+				answerList: [
+					['18-25 лет', '26-35 лет', '36-45 лет', '46 лет и старше'],
+					['В акции', 'В золото', 'В недвижимость', 'В криптовалюту', 'В валюту', 'В бизнес', 'Не могу определиться'],
+					['Месяц назад', 'От 1 месяца до полу года назад', 'От полу года до года назад', 'Больше года назад', 'Не могу точно ответить'],
+					['С помощью опытного наставника', 'Самостоятельно']
+				]
+			},
+			methods: {
+				newQuestion: function (param) {
+					document.querySelectorAll('.test__input').forEach(e => {
+						e.checked = false;
+					});
+					if (param == 1) {
+						if (this.id == 0) {
+							return false;
+						} else {
+							this.id = this.id - 1;
+							this.question = this.questList[this.id];
+							this.answers = this.answerList[this.id]
+						}
+					}
+					if (param == 2) {
+						if (this.id == 4) {
+							return false;
+						} else {
+							this.id = this.id + 1;
+							this.question = this.questList[this.id];
+							this.answers = this.answerList[this.id];
+						}
+					}
+				}
+			}
+		})
+	</script>
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>
